@@ -20,7 +20,6 @@ function Homework() {
       const isEmpty = Object.values(data).some((value) => value === "");
       if (isEmpty) {
         alert("Alert: All fields are required!");
-        setFlag(false);
       }
     }
   }, [data, flag]);
