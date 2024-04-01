@@ -47,31 +47,31 @@ function Homework()  {
 
     return (
     <div>
-    {flag ? (
-        <div className="card">
-            <div className="header">
-                <img src="https://icons.veryicon.com/png/o/miscellaneous/micro-credit/personal-data-27.png" weight="40px" height="20px"/>
-                <h2>User data</h2>
+        {flag ? (
+            <div className="card">
+                <div className="header">
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/micro-credit/personal-data-27.png" weight="40px" height="20px"/>
+                    <h2>User data</h2>
+                </div>
+                <p>Name: {data.name}</p>
+                <p>Last Name: {data.lastName}</p>
+                <p>Phone Number: {data.phoneNumber}</p>
+                <p>Year of Birth: {data.yearOfBirth}</p>
             </div>
-            <p>Name: {data.name}</p>
-            <p>Last Name: {data.lastName}</p>
-            <p>Phone Number: {data.phoneNumber}</p>
-            <p>Year of Birth: {data.yearOfBirth}</p>
-        </div>
-    ) : (
-        <form onSubmit={handleSubmit}>
-            <input onChange={(e) => handleChange(e, 'name')} value={data.name} type='text' placeholder='Name' />
-            <br />
-            <input onChange={(e) => handleChange(e, 'lastName')} value={data.lastName} type='text' placeholder='Last Name' />
-            <br />
-            <input onChange={(e) => handleChange(e, 'phoneNumber')} value={data.phoneNumber} type='number' placeholder='Phone Number' />
-            <br />
-            <DatePicker selected={date} onChange={handleDateChange} dateFormat="yyyy" showYearPicker placeholderText='Year of Birth' />
-            <br />
-            <button>Submit</button>
-        </form>
-    )}
-</div>
+        ) : (
+            <form>
+                <input onChange={(e) => handleChange(e, 'name')} value={data.name} type='text' placeholder='Name' />
+                <br />
+                <input onChange={(e) => handleChange(e, 'lastName')} value={data.lastName} type='text' placeholder='Last Name' />
+                <br />
+                <input onChange={(e) => handleChange(e, 'phoneNumber')} value={data.phoneNumber} type='number' placeholder='Phone Number' />
+                <br />
+                <DatePicker selected={date} onChange={handleDateChange} dateFormat="yyyy" showYearPicker placeholderText='Year of Birth' />
+                <br />
+                <button onClick={(e) => handleSubmit(e)}>Submit</button>
+            </form>
+         )}
+    </div>
     )
 }
 
