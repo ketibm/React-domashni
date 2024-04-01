@@ -26,8 +26,7 @@ function Homework() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const isEmpty = Object.values(data).some((value) => value === "");
-    if (isEmpty) {
+    if (Object.values(data).some((value) => value === "")) {
       alert("Alert: All fields are required!");
     } else {
       setFlag(true);
