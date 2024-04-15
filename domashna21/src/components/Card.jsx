@@ -1,13 +1,25 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-const Card = ({img, hoverImg, favorite, title, description, date, price, rating}) => {
+const Card = ({
+  img,
+  hoverImg,
+  favorite,
+  title,
+  description,
+  date,
+  price,
+  rating,
+}) => {
   return (
-    <div className='card'>
+    <div className="card">
       <div className="card-img">
-        <img src={img} alt={title}/> 
+        <img src={img} alt={title} />
         <img src={hoverImg} alt={title} className="hover-img" />
-        {favorite && <button id='button'>{favorite}</button>}
-        <span>❤️</span>
+        {favorite && <button id="button">{favorite}</button>}
+        <span>
+          <button className="heart">❤️</button>
+        </span>
       </div>
       <div className="card-details">
         <div className="title">
@@ -22,4 +34,4 @@ const Card = ({img, hoverImg, favorite, title, description, date, price, rating}
   );
 };
 
-export default Card
+export default Card;
