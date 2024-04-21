@@ -1,0 +1,19 @@
+.race--card__container {
+  padding: 15px;
+  width: 320px;
+  border: 2px solid #e10600;
+  border-radius: 12px;
+  display: flex;
+  color: black;
+  cursor: pointer;
+}
+
+.race--card__container:hover {
+  color: #e10600;
+}
+
+@media screen and (max-width: 480px) {
+  .race--card__container {
+    width: 380px;
+  }
+}

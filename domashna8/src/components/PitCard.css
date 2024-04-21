@@ -1,0 +1,20 @@
+.pit--card__container {
+  padding: 15px;
+  width: 300px;
+  border: 2px solid #e10600;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  cursor: pointer;
+}
+
+.pit--card__container:hover {
+  color: #e10600;
+}
+
+@media screen and (max-width: 480px) {
+  .pit--card__container {
+    width: 380px;
+  }
+}

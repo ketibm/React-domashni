@@ -1,0 +1,20 @@
+.drivers--page__container {
+  width: 100%;
+}
+
+.drivers--page__img--banner {
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  object-fit: contain;
+  opacity: 0.1;
+  background-image: url("https://as2.ftcdn.net/v2/jpg/05/79/75/39/1000_F_579753941_lRNgw6HD8ouKHmam2HYTMW1b0zTCaMng.jpg");
+}
+
+.drivers--page__f1--drivers {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+}
