@@ -43,6 +43,7 @@ const DriversPage = () => {
   return (
     <div className="drivers--page__container">
       <div className="drivers--page__img--banner" />
+      <h1 className="drivers--page__header">F1 Drivers</h1>
       <div className="drivers--page__f1--drivers">
         {drivers.map((driver, i) => (
           <DriverCard
