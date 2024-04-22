@@ -44,6 +44,7 @@ const PitPage = () => {
 
   return (
     <div className="pit--page__container">
+      <div className="drivers--page__img--banner" />
       <div className="pit--page__header">
         <h1>Pit</h1>
         <p>Provides information about cars going through the pit lane.</p>

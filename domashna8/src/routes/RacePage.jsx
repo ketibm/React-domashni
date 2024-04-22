@@ -42,6 +42,7 @@ const RacePage = () => {
 
   return (
     <div className="race--page__container">
+      <div className="drivers--page__img--banner" />
       <div className="race--page__header">
         <h1>Race Control</h1>
         <p>
