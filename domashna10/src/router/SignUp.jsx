@@ -8,12 +8,8 @@ const SignUp = () => {
     password: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setData({
-      ...data,
-      [name]: value,
-    });
+  const handleChange = (value, name) => {
+    setData({ ...data, [name]: value.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -29,7 +25,7 @@ const SignUp = () => {
   return (
     <div className="sign-up--container">
       <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div className="form--group">
           <label className="form--group__label" htmlFor="username">
             Username:
@@ -40,7 +36,7 @@ const SignUp = () => {
             id="username"
             name="username"
             value={data.username}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e, "username")}
             required
           />
         </div>
@@ -54,7 +50,7 @@ const SignUp = () => {
             id="email"
             name="email"
             value={data.email}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e, "email")}
             required
           />
         </div>
@@ -68,7 +64,7 @@ const SignUp = () => {
             id="password"
             name="password"
             value={data.password}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e, "password")}
             required
           />
         </div>

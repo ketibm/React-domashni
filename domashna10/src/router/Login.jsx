@@ -11,12 +11,8 @@ const Login = () => {
   const { setAuth } = useAuth();
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setData({
-      ...data,
-      [name]: value,
-    });
+  const handleChange = (value, name) => {
+    setData({ ...data, [name]: value.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -44,7 +40,7 @@ const Login = () => {
           to create an account.
         </p>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div className="form--group">
           <label className="form--group__label" htmlFor="username">
             Username:
@@ -55,7 +51,7 @@ const Login = () => {
             id="username"
             name="username"
             value={data.username}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e, "username")}
           />
         </div>
         <div className="form--group">
@@ -68,7 +64,7 @@ const Login = () => {
             id="password"
             name="password"
             value={data.password}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e, "password")}
           />
         </div>
         <div className="button">
@@ -76,9 +72,9 @@ const Login = () => {
             Login
           </button>
           <button
+            onClick={() => handleSignUpClick()}
             type="submit"
             className="form--button"
-            onClick={handleSignUpClick}
           >
             New user
           </button>
