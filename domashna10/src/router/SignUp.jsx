@@ -15,12 +15,12 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", data);
-    alert("Congrtulations, your account has been successfully created");
     setData({
       username: "",
       email: "",
       password: "",
     });
+    alert("Congrtulations, your account has been successfully created");
   };
 
   return (
