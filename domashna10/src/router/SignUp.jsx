@@ -20,7 +20,7 @@ const SignUp = () => {
       email: "",
       password: "",
     });
-    alert("Congrtulations, your account has been successfully created");
+    alert("Welcome, your account has been successfully created.");
   };
 
   return (
