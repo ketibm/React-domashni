@@ -20,8 +20,12 @@ const Login = () => {
     const { username, password } = data;
     if (username === "user" && password === "password") {
       setAuth(true);
+      alert("Welcome back");
     } else {
       console.log("Invalid credentials");
+      alert(
+        "The username and/or password you specified are not correct.  If you have not created an account yet then please sign up first with click on New User."
+      );
     }
   };
 
